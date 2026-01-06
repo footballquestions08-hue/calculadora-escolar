@@ -5,7 +5,7 @@ const avgSpan = document.getElementById("average");
 function addGrade() {
   const row = document.createElement("div");
   row.innerHTML = `
-    <input type="number" placeholder="Nota (ej: 8.5)">
+<input type="number" min="0" max="10" step="0.1" placeholder="Nota (ej: 8.5)">
     <input type="number" placeholder="Peso (%)">
   `;
   row.querySelectorAll("input").forEach(i => i.oninput = calculateAverage);
@@ -71,3 +71,4 @@ function resetPlanner() {
     i.value = data[idx] || "";
   });
 })();
+
