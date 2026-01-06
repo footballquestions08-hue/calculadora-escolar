@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Escolar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calcula tus promedios, planifica tu estudio y alcanza tus metas académicas con herramientas escolares gratuitas.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h2>📘 Calculadora Escolar</h2>
+</header>
+
+<main class="container">
+
+  <h1>Herramientas Escolares Gratuitas</h1>
+  <p class="subtitle">
+    Calcula tus promedios, planifica tu estudio y alcanza tus metas académicas con nuestras herramientas profesionales
+  </p>
+
+  <!-- PUBLICIDAD SUPERIOR -->
+  <div class="ad ad-top">
+    Espacio Publicitario Superior<br>
+    728 x 90 px<br>
+    <small>Publicidad</small>
+  </div>
+
+  <!-- CALCULADORA PROMEDIO -->
+  <section class="card">
+    <h3>Calculadora de Promedio</h3>
+    <p>Añade tus notas y calcula tu promedio automáticamente</p>
+
+    <div id="grades"></div>
+
+    <button onclick="addGrade()">Añadir Nota</button>
+
+    <div class="result">
+      Promedio: <span id="average">0.00</span>
+    </div>
+  </section>
+
+  <!-- PUBLICIDAD CENTRAL -->
+  <div class="ad ad-middle">
+    Espacio Publicitario Central<br>
+    728 x 160 px<br>
+    <small>Publicidad</small>
+  </div>
+
+  <!-- CALCULADORA NOTA NECESARIA -->
+  <section class="card">
+    <h3>Calculadora de Nota Necesaria</h3>
+    <p>Descubre qué nota necesitas para alcanzar tu objetivo</p>
+
+    <input id="currentAvg" type="number" placeholder="Promedio Actual (ej: 7.5)">
+    <input id="currentWeight" type="number" placeholder="Peso del Promedio Actual (%) ej: 60">
+    <input id="targetAvg" type="number" placeholder="Promedio Objetivo (ej: 8.0)">
+    <input id="finalWeight" type="number" placeholder="Peso del Examen Final (%) ej: 40">
+
+    <button onclick="calculateNeeded()">Calcular Nota Necesaria</button>
+
+    <div class="result">
+      Nota necesaria: <span id="neededGrade">-</span>
+    </div>
+
+    <details class="info">
+      <summary>¿Cómo funciona?</summary>
+      <p>
+        Esta calculadora determina qué nota necesitas en tu examen final para alcanzar el promedio deseado.
+        Ingresa tu promedio actual, su peso (%), el promedio que deseas alcanzar, y el peso del examen final (%).
+        La suma de ambos pesos debe ser 100%.
+      </p>
+    </details>
+  </section>
+
+  <!-- PLANIFICADOR -->
+  <section class="card">
+    <h3>Planificador de Estudio Semanal</h3>
+    <p>Organiza tu tiempo y maximiza tu productividad</p>
+
+    <h4>Tu Horario de Estudio</h4>
+    <p>Organiza tus materias y actividades semanales</p>
+
+    <div class="planner-controls">
+      <button onclick="savePlanner()">Guardar</button>
+      <button class="danger" onclick="resetPlanner()">Reiniciar</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Horario</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mañana</td>
+            <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
+          </tr>
+          <tr>
+            <td>Tarde</td>
+            <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
+          </tr>
+          <tr>
+            <td>Noche</td>
+            <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tips">
+      <h4>💡 Consejos para una buena planificación</h4>
+      <ul>
+        <li>Dedica más tiempo a las materias que te resultan difíciles</li>
+        <li>Alterna materias teóricas con prácticas para mantener la concentración</li>
+        <li>Incluye descansos regulares entre sesiones de estudio</li>
+        <li>Guarda tu planificación regularmente con el botón "Guardar"</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PUBLICIDAD INFERIOR -->
+  <div class="ad ad-bottom">
+    Espacio Publicitario Inferior<br>
+    728 x 90 px<br>
+    <small>Publicidad</small>
+  </div>
+
+  <section class="card">
+    <h3>¿Por qué usar nuestra calculadora escolar?</h3>
+    <p>
+      Porque es rápida, gratuita, fácil de usar y pensada específicamente para estudiantes
+      que quieren organizarse mejor y mejorar su rendimiento académico.
+    </p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
